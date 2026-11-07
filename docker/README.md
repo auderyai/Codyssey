@@ -18,15 +18,15 @@
 
 ### 3.1 Docker 설치 및 초기 설정 확인
 Docker 엔진의 버전을 확인하고, 기본 Nginx 이미지를 풀(Pull)하여 컨테이너를 실행하는 과정입니다.
-![Docker 설치 및 초기 설정](img/docker-01-setup.png)
+![Docker 설치 및 초기 설정](img/docker-01-basic.png)
 
 ### 3.2 기본 컨테이너 실행 및 관리
 `hello-world` 실행을 통한 동작 테스트와 `ubuntu` 컨테이너 내부로 진입하여 명령어를 실행하는 실습입니다.
-![컨테이너 기초 운영](img/docker-02-ops.png)
+![컨테이너 기초 운영](img/docker-02-execution.png)
 
 ### 3.3 Dockerfile 빌드 및 이미지 생성 과정
-`Dockerfile`과 `index.html`을 작성하고, `docker build` 명령어를 통해 커스텀 이미지를 생성하는 전체 과정입니다. (한글 인코딩 수정 과정 포함)
-![Dockerfile 빌드 과정](img/docker-03-build.png)
+`Dockerfile`과 `index.html`을 작성하고, `docker build` 명령어를 통해 커스텀 이미지를 생성하는 전체 과정입니다.
+![Dockerfile 빌드 과정](img/docker-04-build-log.png)
 
 ### 3.4 최종 브라우저 실행 결과 비교
 
