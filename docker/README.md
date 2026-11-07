@@ -28,7 +28,7 @@
 #### 3.3.2 최종 브라우저 실행 화면 (성공)
 HTML 헤더에 `<meta charset="UTF-8">`를 추가하고 이미지를 다시 빌드하여 한글이 정상적으로 출력되는 상태입니다.
 
-![최종 성공 화면](img/docker-04-custom-nginx.png)
+![최종 성공 화면](img/docker-03-success.png)
 
 ---
 
