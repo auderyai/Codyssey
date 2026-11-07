@@ -16,14 +16,19 @@
 
 ## 3. 실습 증빙 (Screenshots)
 
-### 3.1 Docker 운영 및 상태 확인
-![Docker 운영](./img/docker-02-execution.png)
+### 3.3 최종 브라우저 실행 결과 비교
 
-### 3.2 커스텀 이미지 빌드 과정
-![이미지 빌드](./img/docker-04-build-log.png)
+#### 3.3.1 최종 브라우저 실행 화면 (성공 전)
+한글 인코딩 설정(`UTF-8`)이 적용되지 않아 브라우저에서 한글이 깨져 보이는 현상입니다.
 
-### 3.3 최종 브라우저 실행 화면 (성공)
-![브라우저 결과](./img/docker-05-success.png)
+![인코딩 오류 화면](img/docker-03-error-encoding.png)
+
+---
+
+#### 3.3.2 최종 브라우저 실행 화면 (성공)
+HTML 헤더에 `<meta charset="UTF-8">`를 추가하고 이미지를 다시 빌드하여 한글이 정상적으로 출력되는 상태입니다.
+
+![최종 성공 화면](img/docker-04-custom-nginx.png)
 
 ---
 
@@ -50,8 +55,9 @@ html
 </head>
 <body>
     <h1>Hello, Docker!</h1>
-    <p>한글 인코딩이 정상적으로 적용된 화면입니다.</p>
+    <p>이 페이지는 Dockerfile을 통해 빌드된 커스텀 이미지에서 실행 중입니다.</p>
+    <p>✅ 한글 인코딩 문제가 해결되었습니다!</p>
 </body>
 </html>
 작성자: auderyai
-최종 수정일: $(date +'%Y-%m-%d')
+최종 수정일: 2026-11-05
