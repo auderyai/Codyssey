@@ -4,8 +4,8 @@
 
 ## 1. 프로젝트 구조
 현재 디렉토리에 포함된 주요 파일들입니다.
-- `Dockerfile`: Nginx 기반의 커스텀 이미지 빌드 설정 파일
-- `index.html`: 웹 서버에서 출력될 메인 페이지 (UTF-8 적용)
+- [Dockerfile](./Dockerfile): Nginx 기반의 커스텀 이미지 빌드 설정 파일
+- [index.html](./index.html): 웹 서버에서 출력될 메인 페이지 (UTF-8 적용)
 - `img/`: 실습 증빙 스크린샷 모음
 
 ## 2. 주요 실습 내용
@@ -15,25 +15,29 @@
 4. **포트 매핑**: 호스트 8080포트와 컨테이너 80포트 연결
 
 ## 3. 실습 증빙 (Screenshots)
+
 ### 3.1 Docker 운영 및 상태 확인
-![Docker 운영](./img/docker-02-ops.png)
+![Docker 운영](./img/docker-02-execution.png)
 
 ### 3.2 커스텀 이미지 빌드 과정
-![이미지 빌드](./img/docker-04-build.png)
+![이미지 빌드](./img/docker-04-build-log.png)
 
 ### 3.3 최종 브라우저 실행 화면 (성공)
-![브라우저 결과](./img/docker-05-browser-success.png)
+![브라우저 결과](./img/docker-05-success.png)
 
 ---
 
 ## 4. 소스 코드 (Source Code)
 
-### [Dockerfile](./Dockerfile)
+### Dockerfile
 ```dockerfile
 # Nginx 베이스 이미지 사용
 FROM nginx:latest
+
 # 로컬의 index.html을 컨테이너 내부로 복사
 COPY index.html /usr/share/nginx/html/index.html
+
+# 포트 설정
 EXPOSE 80
 index.html
 html
@@ -49,4 +53,5 @@ html
     <p>한글 인코딩이 정상적으로 적용된 화면입니다.</p>
 </body>
 </html>
-
+작성자: auderyai
+최종 수정일: $(date +'%Y-%m-%d')
