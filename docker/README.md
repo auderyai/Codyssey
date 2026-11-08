@@ -41,6 +41,22 @@ HTML 헤더에 `<meta charset="UTF-8">`를 추가하고 이미지를 다시 빌�
 ![최종 성공 화면](img/docker-03-success.png)
 
 ---
+### 3.5 바인드 마운트(Bind Mount) 실습 및 실시간 반영 확인
+
+호스트의 소스 코드 변경이 컨테이너에 즉시 반영되는지 확인하는 실습을 진행했습니다.
+
+#### 1 실습 환경 및 명령어
+- **명령어**: `docker run -d -p 8081:80 --name bind-mount-test -v $(pwd):/usr/share/nginx/html nginx`
+![실행 과정](img/docker-05-bind-mount.png)
+
+#### 2 단계별 반영 결과
+- **단계 1 (오류)**: 초기 실행 시 한글 인코딩 문제 발생
+  ![인코딩 오류](img/docker-05-bind-mount-error.png)
+- **단계 2 (해결)**: 호스트에서 `index.html` 수정 후 즉시 반영 확인
+  ![1차 수정 성공](img/docker-05-bind-mount-success.png)
+- **단계 3 (검증)**: 문구 추가 수정 후 실시간 업데이트 최종 확인
+  ![2차 수정 성공](img/docker-05-bind-mount-success-after.png)
+
 
 ## 4. 소스 코드 (Source Code)
 
