@@ -1,12 +1,14 @@
-# 🚀 인프라 문서화 프로젝트 (Codyssey)
+# 🚀 Codyssey 인프라 문서화 프로젝트
 
-이 프로젝트는 Linux, Docker, Git의 기초부터 심화 활용까지의 과정을 기록한 기술 문서 저장소입니다.
+이 프로젝트는 리눅스 서버 구축부터 도커 컨테이너 운영, 그리고 Git을 통한 버전 관리까지의 학습 과정을 기록한 문서입니다.
+
+---
 
 ## 📂 카테고리 바로가기
 
-1. **[Linux 환경 구축 및 권한 관리](../linux/README.md)**
-2. **[Docker 컨테이너 운영](./README.md)**
-3. **[Git & GitHub 연동](../git/README.md)**
+1. [Linux 환경 구축 및 권한 관리](./linux/README.md)
+2. [Docker 컨테이너 운영](./docker/README.md)
+3. [Git & GitHub 연동](./git/README.md)
 
 ---
 
@@ -60,3 +62,19 @@ IaC: docker-compose.yml을 통해 인프라 설정을 문서화하면 팀원 누
 B. GitHub SSH 보안 설정
 SSH Key 생성: 보안 강화된 인증 방식 도입
 공개키 등록: GitHub 계정에 SSH 키 등록 및 통신 테스트
+
+### 🔐 Git SSH 인증 및 자동 로그인 설정
+단순한 ID/PW 방식에서 벗어나, SSH 비대칭키를 이용한 보안 인증을 설정했습니다.
+
+- **주요 내용**: `ed25519` 알고리즘 기반 키 생성, GitHub 공개키 등록, 원격 저장소 SSH 주소 전환
+- **학습 효과**: 보안성 향상 및 `git push` 시 인증 절차 간소화
+- **상세 보기**: [Git SSH 설정 가이드](./git/README.md#🔐-git-ssh-인증-설정)
+
+---
+
+## 🛠 사용 기술 스택
+- **OS**: Ubuntu (Linux)
+- **Container**: Docker, Docker Compose
+- **VCS**: Git, GitHub
+- **Web Server**: Nginx
+- **Database**: Redis
