@@ -83,7 +83,7 @@ Docker 엔진이 직접 관리하는 **볼륨(Volume)**을 생성하고, 컨테�
 
 ## 4. 소스 코드 (Source Code)
 
-### Dockerfile
+### 1.Dockerfile
 ```dockerfile
 # Nginx 베이스 이미지 사용
 FROM nginx:latest
@@ -144,3 +144,13 @@ networks:
 
 ### 3. Compose 운영 워크플로우 실습
 ![Compose 운영 기록](img/docker-06-compose-ops.png) 
+
+## 4. 컨테이너 운영 현황 요약
+Docker Desktop과 CLI를 통해 현재 실행 중이거나 생성된 컨테이너 목록을 관리합니다.
+
+![컨테이너 리스트](./img/docker-05-container-list.png)
+
+- **주요 컨테이너**:
+  - `my-custom-web`: 커스텀 Nginx 이미지 기반 서비스 (8080 포트)
+  - `bind-mount-test`: 호스트와 파일을 공유하는 실습용 컨테이너 (8081 포트)
+  - `my-ubuntu`: 대화형 터미널 실습용

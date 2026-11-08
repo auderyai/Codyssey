@@ -72,9 +72,31 @@ SSH Key 생성: 보안 강화된 인증 방식 도입
 
 ---
 
-## 🛠 사용 기술 스택
-- **OS**: Ubuntu (Linux)
-- **Container**: Docker, Docker Compose
-- **VCS**: Git, GitHub
-- **Web Server**: Nginx
-- **Database**: Redis
+## 🛠 기술 스택 및 환경 (Tech Stack & Environment)
+
+이 프로젝트는 아래의 실제 운영 환경에서 구축 및 검증되었습니다.
+
+### 💻 Infrastructure
+- **OS**: Ubuntu 24.04.4 LTS (Noble Numbat)
+- **VCS**: Git v2.43.0 / GitHub
+
+### 🐳 Container Runtime
+- **Docker**: v29.6.2
+- **Docker Compose**: v5.3.1
+
+### 🌐 Application Stack
+- **Web Server**: Nginx (Latest)
+- **Database**: Redis (Latest)
+- **Custom Image**: `my-webserver:v2` (Nginx 기반 커스텀 이미지)
+
+---
+
+### 📊 컨테이너 운영 현황 (Container Status)
+현재 시스템에서 관리 중인 주요 컨테이너 목록입니다.
+
+| Name | Image | Port | Status |
+| :--- | :--- | :--- | :--- |
+| **bind-mount-test** | nginx | 8081:80 | Running (Up 4 hours) |
+| **my-custom-web** | my-webserver:v2 | 8080:80 | Exited |
+| **my-ubuntu** | ubuntu | - | Exited |
+| **test-nginx** | nginx | 80 | Exited |
