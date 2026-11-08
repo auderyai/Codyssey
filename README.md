@@ -72,22 +72,25 @@ SSH Key 생성: 보안 강화된 인증 방식 도입
 
 ---
 
-## 🛠 기술 스택 및 환경 (Tech Stack & Environment)
+🛠 기술 스택 및 환경 (Tech Stack & Environment)
+이 프로젝트는 실제 운영 환경과 유사한 조건에서 인프라를 구축하고 검증한 기록입니다.
 
-이 프로젝트는 아래의 실제 운영 환경에서 구축 및 검증되었습니다.
-
-### 💻 Infrastructure
-- **OS**: Ubuntu 24.04.4 LTS (Noble Numbat)
-- **VCS**: Git v2.43.0 / GitHub
-
-### 🐳 Container Runtime
-- **Docker**: v29.6.2
-- **Docker Compose**: v5.3.1
-
-### 🌐 Application Stack
-- **Web Server**: Nginx (Latest)
-- **Database**: Redis (Latest)
-- **Custom Image**: `my-webserver:v2` (Nginx 기반 커스텀 이미지)
+💻 Infrastructure & OS
+Host OS: Ubuntu 24.04.4 LTS (Noble Numbat)
+Guest OS (Container): CentOS 7 (Legacy 환경 대응 및 저장소 이슈 해결 실습)
+Security: Linux 권한 관리 (chmod, chown) 및 사용자 그룹 설정 최적화
+🐳 Containerization
+Engine: Docker v29.6.2
+Orchestration: Docker Compose v5.3.1
+Storage: Docker Volumes & Bind Mounts를 활용한 데이터 영속성 확보
+🌐 Application Stack
+Web Servers:
+Nginx: 정적 파일 서빙 및 커스텀 이미지 빌드 (v1, v2)
+Apache (httpd): my-apache:v1 커스텀 이미지 구축 및 포트 포워딩
+Database/Cache: Redis (Latest) - 멀티 컨테이너 아키텍처 구성
+🚀 Tools & VCS
+Version Control: Git v2.43.0 / GitHub
+Authentication: SSH Key 기반의 안전한 원격 저장소 연결 및 자격 증명 관리
 
 ---
 

@@ -40,6 +40,18 @@ Docker 엔진의 버전을 확인하고, 기본 Nginx 이미지를 풀(Pull)하�
 HTML 헤더에 `<meta charset="UTF-8">`를 추가하고 이미지를 다시 빌드하여 한글이 정상적으로 출력되는 상태입니다.
 ![최종 성공 화면](img/docker-03-success.png)
 
+#### 3.4.3 Apache Server
+Nginx 외에 또 다른 대표적인 웹 서버인 Apache(httpd)를 이용한 이미지 빌드 실습을 진행했습니다. Nginx와는 다른 설정 방식과 웹 루트 경로를 학습하고, Dockerfile을 통해 커스텀 페이지를 배포했습니다.
+
+- **주요 학습 내용**: Apache 공식 이미지 사용법, 웹 루트 경로(`htdocs`) 설정
+- **상세 과정**: 이미지 빌드 오류 해결 및 최종 실행 확인
+
+[👉 Apache 실습 상세 내용 및 과정 확인하기](../apache/README.md)
+
+
+### [3.4.4 CentOS Image 실습 바로가기](./centos/README.md)
+- CentOS 7 지원 종료에 따른 저장소 설정 변경 및 네트워크 도구 설치 실습 내용을 포함하고 있습니다.
+
 ---
 ### 3.5 바인드 마운트(Bind Mount) 실습 및 실시간 반영 확인
 
@@ -154,3 +166,15 @@ Docker Desktop과 CLI를 통해 현재 실행 중이거나 생성된 컨테이�
   - `my-custom-web`: 커스텀 Nginx 이미지 기반 서비스 (8080 포트)
   - `bind-mount-test`: 호스트와 파일을 공유하는 실습용 컨테이너 (8081 포트)
   - `my-ubuntu`: 대화형 터미널 실습용
+
+  ## 5. Docker Desktop 관리 현황
+
+실습을 통해 생성된 이미지와 컨테이너들을 Docker Desktop GUI를 통해 확인한 결과입니다.
+
+### 5.1 Docker Images 목록
+- `centos:7`, `my-apache:v1`, `nginx` 등 실습에 사용된 이미지들이 정상적으로 로드되어 있습니다.
+![Docker Images 목록](./img/docker-desktop-images.png)
+
+### 5.2 실행 중인 컨테이너 목록
+- `my-centos`, `my-apache-server` 등 현재 생성 및 실행 중인 컨테이너 상태를 확인할 수 있습니다.
+![Docker Containers 목록](./img/docker-desktop-containers.png)
