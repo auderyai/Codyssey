@@ -110,3 +110,37 @@ html
 </html>
 작성자: auderyai
 최종 수정일: 2026-11-05
+
+
+## 🌟 보너스 실습: Docker Compose 멀티 컨테이너 운영
+
+### 1. docker-compose.yml 설정 (IaC)
+
+```yaml
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "${WEB_PORT:-8080}:80" # 환경 변수 활용 (기본값 8080)
+    networks:
+      - infra-net
+
+  cache:
+    image: redis:alpine
+    networks:
+      - infra-net
+
+networks:
+  infra-net:
+    driver: bridge
+```     
+
+### 2. 환경 변수 주입 및 실행 결과
+- **설정값**: `WEB_PORT=9000` 주입
+- **확인 URL**: `http://localhost:9000`
+![브라우저 접속 확인](img/docker-05-compose-web.png)
+
+### 3. Compose 운영 워크플로우 실습
+![Compose 운영 기록](img/docker-06-compose-ops.png) 
