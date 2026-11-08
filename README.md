@@ -94,9 +94,9 @@ SSH Key 생성: 보안 강화된 인증 방식 도입
 ### 📊 컨테이너 운영 현황 (Container Status)
 현재 시스템에서 관리 중인 주요 컨테이너 목록입니다.
 
-| Name | Image | Port | Status |
-| :--- | :--- | :--- | :--- |
-| **bind-mount-test** | nginx | 8081:80 | Running (Up 4 hours) |
-| **my-custom-web** | my-webserver:v2 | 8080:80 | Exited |
-| **my-ubuntu** | ubuntu | - | Exited |
-| **test-nginx** | nginx | 80 | Exited |
+| Name                 | Image            | Port     | Status              |
+| :---                 | :---            | :---     | :---                |
+| **bind-mount-test**  | nginx           | 8081:80 | Running (Up 4 hours) |
+| **my-custom-web**    | my-webserver:v2 | 8080:80 | Exited              |
+| **my-ubuntu**        | ubuntu         | -       | Exited              |
+| **test-nginx**       | nginx         | 80       | Exited             |
